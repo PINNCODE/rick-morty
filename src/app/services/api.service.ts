@@ -50,15 +50,14 @@ export class ApiService {
         return response;
       }),
       mergeMap( (responseLocation: LocationResponse) => {
-        return this.http.get<any>(`${this.URL_BASE}/character/${responseLocation.residents.toString()}`)
-          .pipe(
-            map(value => {
-              return {
-                characters: value,
-                location_data:  responseLocation
-              };
-            })
-          )
+        return this.getCharacter(responseLocation.residents.toString()).pipe(
+          map(value => {
+            return {
+              characters: value,
+              location_data:  responseLocation
+            };
+          })
+        )
       })
     );
   }
@@ -82,14 +81,14 @@ export class ApiService {
         return response;
       }),
       mergeMap( (responseEpisode: any) => {
-        return this.http.get<any>(`${this.URL_BASE}/character/${responseEpisode.characters.toString()}`).pipe(
+        return this.getCharacter(responseEpisode.characters.toString()).pipe(
           map(value => {
             return {
               characters: value,
               episode_data:  responseEpisode
             };
           })
-        )
+        );
       })
     )
   }

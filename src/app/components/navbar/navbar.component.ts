@@ -30,7 +30,6 @@ export class NavbarComponent implements OnInit{
     ).subscribe((event: any) => {
       let url = event.url.split('/')
       this.showBar = url.length <= 3;
-      console.log(event.url);
     });
   }
 
