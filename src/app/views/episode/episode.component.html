@@ -1,0 +1,19 @@
+<div class="character-detail">
+  <div class="personal-data">
+    <h1>{{data?.episode_data?.name}}</h1>
+    <hr>
+    <p>Air date: {{data?.episode_data?.air_date}}</p>
+    <p>Episode: {{data?.episode_data?.episode}}</p>
+    <p>No. Characters: {{data?.episode_data?.characters.length}}</p>
+  </div>
+</div>
+<div class="back-button">
+  <app-button [icon]="'back'" [text]="'Regresar'" (click)="back()"></app-button>
+</div>
+<div class="residents-container">
+  <h2>Characters</h2>
+  <hr>
+  <div class="residents-cards" >
+    <app-card  *ngFor="let resident of data?.characters" [data]="resident" [title]="'Resident'"></app-card>
+  </div>
+</div>

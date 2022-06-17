@@ -1,0 +1,17 @@
+<div class="character-detail">
+  <div class="img">
+    <img [src]="data?.image" [alt]="data?.name">
+  </div>
+  <div class="personal-data">
+    <h1>{{data?.name}}</h1>
+    <hr>
+    <h4>{{data?.species}}</h4>
+    <p>Status: {{data?.status}}</p>
+    <p>Gender: {{data?.gender}}</p>
+    <p>Origin: {{data?.origin?.name}}</p>
+    <p>Location: {{data?.location?.name}}</p>
+  </div>
+</div>
+<div class="back-button">
+  <app-button [icon]="'back'" [text]="'Regresar'" (click)="back()"></app-button>
+</div>

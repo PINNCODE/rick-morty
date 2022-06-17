@@ -1,0 +1,25 @@
+.character-detail {
+  display: flex;
+  padding: 25px;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.img {
+  img{
+    border-radius: 20px;
+  }
+}
+
+.personal-data {
+  margin-left: 20px;
+  p {
+    margin: 8px 0px
+  }
+}
+
+.back-button {
+  display: flex;
+  justify-content: center;
+}

@@ -1,0 +1,19 @@
+<div class="card-container">
+  <div class="card">
+    <div class="header">
+      <p>{{ title }}</p>
+    </div>
+    <div class="body-img" [style.background-image]="'url(./assets/img/portal.gif)'"></div>
+    <div class="body" >
+      <div class="name">
+        <p>{{data?.name}}</p>
+      </div>
+      <div class="air-date">
+        <p>Air date: {{data?.air_date}}</p>
+      </div>
+      <div class="episode">
+        <p>Episode: {{data?.episode}}</p>
+      </div>
+    </div>
+  </div>
+</div>

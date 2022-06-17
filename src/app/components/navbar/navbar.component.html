@@ -1,0 +1,22 @@
+<div class="navbar" >
+  <div class="navbar__logo">
+    <img src="../../../assets/img/Rick_and_Morty.svg" alt="Rick_and_Morty" >
+  </div>
+  <div class="navbar__searchbar">
+    <form *ngIf="this.showBar" [formGroup]="searchBarForm" (submit)="searchBarListener()">
+      <input type="text" placeholder="search bar" formControlName="text">
+    </form>
+    <app-button
+      *ngIf="searchBarForm.valid"
+      class="searchbar-icon"
+      [text]="'Search'"
+      [icon]="'icon-search'"
+      (click)="searchBarListener()"
+    ></app-button>
+  </div>
+  <div class="navbar__items">
+    <div class="navbar__items__item" [routerLink]="'characters'">Characters</div>
+    <div class="navbar__items__item" [routerLink]="'locations'">Locations</div>
+    <div class="navbar__items__item" [routerLink]="'episodes'">Episodes</div>
+  </div>
+</div>

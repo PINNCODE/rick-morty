@@ -1,0 +1,19 @@
+<div class="character-detail">
+  <div class="personal-data">
+    <h1>{{data?.location_data?.name}}</h1>
+    <hr>
+    <p>Dimension: {{data?.location_data?.dimension}}</p>
+    <p>No. Residents: {{data?.location_data?.residents?.length}}</p>
+    <p>Type: {{data?.location_data?.type}}</p>
+  </div>
+</div>
+<div class="back-button">
+  <app-button [icon]="'back'" [text]="'Regresar'" (click)="back()"></app-button>
+</div>
+<div class="residents-container">
+  <h2>Residents</h2>
+  <hr>
+  <div class="residents-cards" >
+    <app-card  *ngFor="let resident of data?.characters" [data]="resident" [title]="'Resident'"></app-card>
+  </div>
+</div>

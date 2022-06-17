@@ -1,0 +1,22 @@
+<div class="card-container">
+  <div class="card">
+    <div class="header">
+      <p>{{ title }}</p>
+    </div>
+    <div class="body-img" [style.background-image]="'url(./assets/img/portal.gif)'"></div>
+    <div class="body" >
+      <div class="name">
+        <p>{{data?.name}}</p>
+      </div>
+      <div class="dimention">
+        <p>Dimension: {{data?.dimension}}</p>
+      </div>
+      <div class="location">
+        <p>No. residents: {{data?.residents?.length}}</p>
+      </div>
+      <div class="origin">
+        <p>Type: {{data?.type}}</p>
+      </div>
+    </div>
+  </div>
+</div>

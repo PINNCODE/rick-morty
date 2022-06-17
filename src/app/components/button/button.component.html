@@ -1,0 +1,4 @@
+<div class="button-container" [ngClass]="{'only-icon': icon && !text, 'icon-text': icon && text }">
+  <img *ngIf="icon" class="icon-button" src="./assets/icons/{{icon}}.svg" alt="">
+  <p *ngIf="text" class="text-button">{{ text }}</p>
+</div>

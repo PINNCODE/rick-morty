@@ -1,0 +1,11 @@
+<div class="main-characters">
+  <h1 class="title">Episodes</h1>
+  <hr>
+  <div class="cards">
+    <app-episode-card *ngFor="let epsiode of data?.results"
+                      [data]="epsiode"
+                      [title]="'episodes'"
+                      (click)="getDetail(epsiode.id)"
+    ></app-episode-card>
+  </div>
+</div>

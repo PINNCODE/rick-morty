@@ -1,0 +1,25 @@
+.episode-detail {
+  padding: 25px;
+}
+
+.data {
+  p {
+    margin: 8px 0px
+  }
+}
+
+.residents-container {
+  display: flex;
+  padding: 25px;
+  flex-direction: column;
+}
+
+.residents-cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.back-button {
+  display: flex;
+  justify-content: center;
+}

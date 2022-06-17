@@ -1,0 +1,9 @@
+<div class="main-characters">
+  <h1 class="title">Locations</h1>
+  <hr>
+  <div class="cards">
+    <ng-container *ngFor="let location of locations">
+      <app-location-card [data]="location" [title]="'Location'" (click)="openDetail(location.id)"></app-location-card>
+    </ng-container>
+  </div>
+</div>

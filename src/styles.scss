@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+@font-face {
+  font-family: rickandmorty;
+  src: url(assets/fonts/get_schwifty.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: secondary_rickandmorty;
+  src: url(assets/fonts/kidos_park.ttf) format("truetype");
+}
+
+:root {
+  --main-color: #263238;
+}

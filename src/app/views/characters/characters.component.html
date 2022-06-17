@@ -1,0 +1,9 @@
+<div class="main-characters">
+  <h1 class="title">Characters</h1>
+  <hr>
+  <div class="cards">
+    <ng-container *ngFor="let character of characters">
+      <app-card [data]="character" [title]="'PORTAL LICENSE'" (click)="openDetail(character.id)"></app-card>
+    </ng-container>
+  </div>
+</div>
